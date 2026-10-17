@@ -20,9 +20,31 @@
     .tagline { color: #d7f5df; }
     nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 18px; }
     nav a { color: white; text-decoration: none; font-weight: bold; }
-    .hero { padding: 65px 6%; background: #eaf7ed; }
-    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; margin: 0 0 18px; }
-    .hero p { max-width: 680px; font-size: 18px; }
+    .hero { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(260px,.8fr); align-items:center; gap:38px; padding:64px 6%; color:#fff; background:radial-gradient(circle at 85% 15%,#16825c 0,transparent 32%),linear-gradient(125deg,#063e30,#075c43 58%,#087b50); overflow:hidden; }
+    .hero-content { max-width:760px; }
+    .hero-kicker { display:inline-block; color:#b8f2ce; font-size:12px; font-weight:bold; letter-spacing:2px; margin-bottom:16px; }
+    .hero h1 { font-size:clamp(34px,5vw,58px); line-height:1.1; margin:0 0 20px; letter-spacing:-1px; }
+    .hero-highlight { color:#b8f2ce; }
+    .hero p { max-width:680px; font-size:17px; }
+    .hero .hero-lead { color:#f1fff5; font-size:19px; line-height:1.65; }
+    .hero .hero-location { color:#d2eadc; font-size:14px; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .hero-actions .button { margin:0; }
+    .hero-primary { background:#d7f5df; color:#064b37; }
+    .hero-primary:hover { background:#fff; }
+    .hero-secondary { background:transparent; border:1px solid #a9d8bd; color:#fff; }
+    .hero-secondary:hover { background:#ffffff16; }
+    .hero-points { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:24px; color:#e2f7e9; font-size:13px; }
+    .hero-tagline { margin-top:24px; font-size:14px!important; font-weight:bold; color:#fff; }
+    .hero-tagline span { color:#b8f2ce; margin-left:8px; font-weight:normal; }
+    .hero-side { padding:25px; border:1px solid #ffffff30; border-radius:16px; background:#ffffff0d; box-shadow:0 18px 45px #00291e35; }
+    .hero-side-label { color:#b8f2ce; font-size:11px; font-weight:bold; letter-spacing:1.6px; margin-bottom:18px; }
+    .hero-feature { display:flex; align-items:flex-start; gap:13px; padding:14px 0; border-bottom:1px solid #ffffff26; }
+    .hero-feature > span { display:grid; place-items:center; flex:0 0 35px; height:35px; border-radius:9px; background:#b8f2ce20; color:#b8f2ce; font-weight:bold; font-size:12px; }
+    .hero-feature strong { display:block; color:#fff; font-size:14px; }
+    .hero-feature small { display:block; margin-top:4px; color:#d2eadc; font-size:12px; line-height:1.5; }
+    .hero-side-link { display:block; margin-top:20px; color:#d7f5df; font-size:13px; font-weight:bold; text-decoration:none; }
+    .hero-side-link:hover { text-decoration:underline; }
     .button { display: inline-block; background: #087b50; color: white; padding: 13px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; margin: 8px 8px 0 0; }
     section { padding: 42px 6%; }
     h2 { color: #075c43; font-size: 28px; }
@@ -67,7 +89,10 @@
       .brand { font-size:25px; }
       nav { gap:10px 14px; }
       nav a { font-size:14px; }
-      .hero { padding:42px 5%; }
+      .hero { grid-template-columns:1fr; gap:28px; padding:42px 5%; }
+      .hero h1 { letter-spacing:-.5px; }
+      .hero-side { padding:20px; }
+      .hero-points { gap:8px 14px; }
       section { padding:32px 5%; }
       .searchbar button { min-width:48px; }
       .sticky-whatsapp { right:10px; bottom:10px; padding:10px 13px; }
@@ -96,11 +121,29 @@
 
   <main>
     <section class="hero" id="home">
-      <h1>Your Trusted Sourcing & Supply Partner</h1>
-      <p>From everyday essentials to specialised equipment, TeamAfriSale helps customers find products, connect with suppliers, place orders and arrange delivery.</p>
-      <p>Based in Kenya, we aim to connect African customers with dependable suppliers and manufacturers.</p>
-      <a class="button" href="https://wa.me/254721926555?text=Hello%20TeamAfriSale%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener">Order or Inquire on WhatsApp</a>
-      <a class="button" href="#products">Explore Our Services</a>
+      <div class="hero-content">
+        <span class="hero-kicker">YOUR SOURCING &amp; SUPPLY PARTNER</span>
+        <h1>Find What You Need.<br><span class="hero-highlight">We Help You Source It.</span></h1>
+        <p class="hero-lead">From solar and gas equipment to machinery, home appliances and everyday business essentials, TeamAfriSale helps connect your needs with supply options.</p>
+        <p class="hero-location">Proudly starting from Kenya's coast, with a vision to serve customers across Kenya and African markets.</p>
+        <div class="hero-actions">
+          <a class="button hero-primary" href="https://wa.me/254721926555?text=Hello%20TeamAfriSale%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener">Order or Enquire on WhatsApp <span aria-hidden="true">↗</span></a>
+          <a class="button hero-secondary" href="#categories">Explore Categories <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-points" aria-label="Our service approach">
+          <span>✓ Product sourcing</span>
+          <span>✓ Supplier coordination</span>
+          <span>✓ Delivery arrangements</span>
+        </div>
+        <p class="hero-tagline">Order. Source. Supply. Deliver. <span>Let others flow.</span></p>
+      </div>
+      <div class="hero-side" aria-label="What we help you do">
+        <div class="hero-side-label">ONE PLACE TO START</div>
+        <div class="hero-feature"><span>01</span><div><strong>Tell us what you need</strong><small>Share your product and requirements</small></div></div>
+        <div class="hero-feature"><span>02</span><div><strong>Explore supply options</strong><small>Review availability and quotation</small></div></div>
+        <div class="hero-feature"><span>03</span><div><strong>Agree and arrange delivery</strong><small>Proceed when terms are confirmed</small></div></div>
+        <a class="hero-side-link" href="#source">Have a specific product in mind? Start here →</a>
+      </div>
     </section>
 
 <section id="categories" style="padding:35px 16px;text-align:center;background:#f4f8f4;">
