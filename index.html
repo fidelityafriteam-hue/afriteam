@@ -45,6 +45,10 @@
     .category-card { display:flex; flex-direction:column; justify-content:center; gap:8px; min-height:108px; padding:18px; border:1px solid #dbe8df; border-radius:10px; background:#fff; color:#075c43; text-decoration:none; font-weight:bold; box-shadow:0 2px 7px #123c3010; transition:transform .15s, box-shadow .15s; }
     .category-card span { font-size:13px; font-weight:normal; color:#4d6559; }
     .category-card:hover, .category-card:focus { transform:translateY(-2px); box-shadow:0 5px 14px #123c3020; outline:2px solid #087b50; outline-offset:2px; }
+    .how-step { display:block; color:inherit; text-decoration:none; border-radius:10px; transition:transform .15s, box-shadow .15s; }
+    .how-step:hover, .how-step:focus { transform:translateY(-2px); box-shadow:0 5px 14px #123c3020; outline:2px solid #087b50; outline-offset:2px; }
+    .how-step h3 span { color:#087b50; float:right; }
+    .step-action { display:inline-block; margin-top:8px; color:#087b50; font-weight:bold; text-decoration:underline; }
     .searchbar { display:flex; gap:8px; margin-top:16px; max-width:560px; }
     .searchbar input { flex:1; min-width:0; padding:12px; border:1px solid #b9d1c1; border-radius:6px; font-size:16px; }
     .searchbar button { border:0; border-radius:6px; padding:10px 16px; background:#eaf7ed; color:#075c43; font-size:18px; cursor:pointer; }
@@ -155,12 +159,12 @@
 
 <section class="soft" id="how">
   <h2>How It Works</h2>
-  <p>Four simple steps to help you order with confidence.</p>
+  <p>Choose a step below to get started or contact us.</p>
   <div class="grid">
-    <div class="item"><h3>1. Choose</h3><p>Browse our categories or tell us the product, quantity and specifications you need.</p></div>
-    <div class="item"><h3>2. Enquire</h3><p>Contact TeamAfriSale on WhatsApp or submit the sourcing form with your delivery location.</p></div>
-    <div class="item"><h3>3. Confirm</h3><p>Review and agree on the quotation, availability, delivery arrangements and payment terms before proceeding.</p></div>
-    <div class="item"><h3>4. Deliver</h3><p>Once the order is agreed, we coordinate supply and delivery under the confirmed terms. Installation support depends on availability.</p></div>
+    <a class="item how-step" href="#categories"><h3>1. Choose <span aria-hidden="true">→</span></h3><p>Browse our categories or tell us the product, quantity and specifications you need.</p><span class="step-action">Browse categories</span></a>
+    <a class="item how-step" href="#source"><h3>2. Enquire <span aria-hidden="true">→</span></h3><p>Contact TeamAfriSale on WhatsApp or submit the sourcing form with your delivery location.</p><span class="step-action">Start an enquiry</span></a>
+    <a class="item how-step" href="https://wa.me/254721926555?text=Hello%20TeamAfriSale%2C%20I%20would%20like%20to%20confirm%20a%20quotation.%20Please%20help%20me%20review%20availability%2C%20delivery%20and%20payment%20terms." target="_blank" rel="noopener"><h3>3. Confirm <span aria-hidden="true">↗</span></h3><p>Review and agree on the quotation, availability, delivery arrangements and payment terms before proceeding.</p><span class="step-action">Discuss your quotation</span></a>
+    <a class="item how-step" href="https://wa.me/254721926555?text=Hello%20TeamAfriSale%2C%20I%20would%20like%20to%20discuss%20delivery%20arrangements%20for%20my%20order." target="_blank" rel="noopener"><h3>4. Deliver <span aria-hidden="true">↗</span></h3><p>Once the order is agreed, we coordinate supply and delivery under the confirmed terms. Installation support depends on availability.</p><span class="step-action">Ask about delivery</span></a>
   </div>
 </section>
 
